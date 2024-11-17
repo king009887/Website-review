@@ -24,75 +24,6 @@
   </style>
 </head>
 <body>
-<<<<<<< HEAD
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Leave a Review&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>form { margin: 20px auto; width: 300px; text-align: left; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>label { display: block; margin-bottom: 5px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>input, textarea, button {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 16px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: blue;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 5px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Leave a Review&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;form id="reviewForm"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="hidden" id="rating" name="rating"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;label for="name"&gt;Name:&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="name" name="name" required&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;label for="email"&gt;Email:&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="email" id="email" name="email" required&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;label for="review"&gt;Review:&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;textarea id="review" name="review" rows="5" maxlength="500" required&gt;&lt;/textarea&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button type="submit"&gt;Submit&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const params = new URLSearchParams(window.location.search);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const rating = params.get('rating');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('rating').value = rating;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const form = document.getElementById('reviewForm');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>form.addEventListener('submit', async (e) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>e.preventDefault();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Convert the rating to a number for comparison</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const numericRating = parseInt(rating, 10);</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const formData = new FormData(form);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = Object.fromEntries(formData.entries());</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (numericRating &gt;= 4) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Redirect to your Google review link if rating is 4 or above</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.location.href = "https://g.page/r/CTJy9-oPDoYIEAI/review";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Simulate posting a review locally if rating is less than 4</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>alert("Thank you for your feedback. We value your input to improve our service.");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-=======
   <h1>Leave a Review</h1>
   <form id="reviewForm">
     <input type="hidden" id="rating" name="rating">
@@ -118,15 +49,17 @@
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
       
-      if (rating >= 4) {
-        // Redirect to your Google review link
+      // Convert the rating to a number for comparison
+      const numericRating = parseInt(rating, 10);
+
+      if (numericRating >= 4) {
+        // Redirect to your Google review link if rating is 4 or above
         window.location.href = "https://g.page/r/CTJy9-oPDoYIEAI/review";
       } else {
-        // Simulate posting a review locally
+        // Simulate posting a review locally if rating is less than 4
         alert("Thank you for your feedback. We value your input to improve our service.");
       }
     });
   </script>
->>>>>>> 7691435ece9f0b12048e5d124954e6ec5ed6e078
 </body>
 </html>
