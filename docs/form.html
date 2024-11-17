@@ -25,41 +25,17 @@
 </head>
 <body>
   <h1>Leave a Review</h1>
-  <form id="reviewForm">
-    <input type="hidden" id="rating" name="rating">
+  <form>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
+    <input type="email" id="email" name="email" placeholder="Your email" required>
+
     <label for="review">Review:</label>
-    <textarea id="review" name="review" rows="5" maxlength="500" required></textarea>
-    
+    <textarea id="review" name="review" rows="5" placeholder="Your review" required></textarea>
+
     <button type="submit">Submit</button>
   </form>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const rating = params.get('rating');
-    document.getElementById('rating').value = rating;
-
-    const form = document.getElementById('reviewForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      
-      // Convert the rating to a number for comparison
-      const numericRating = parseInt(rating, 10);
-
-      if (numericRating >= 4) {
-        // Redirect to your Google review link if rating is 4 or above
-        window.location.href = "https://g.page/r/CTJy9-oPDoYIEAI/review";
-      } else {
-        // Simulate posting a review locally if rating is less than 4
-        alert("Thank you for your feedback. We value your input to improve our service.");
-      }
-    });
-  </script>
 </body>
 </html>
