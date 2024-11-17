@@ -53,6 +53,7 @@
 <p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button type="submit"&gt;Submit&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const params = new URLSearchParams(window.location.search);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const rating = params.get('rating');</span></p>
@@ -61,14 +62,18 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const form = document.getElementById('reviewForm');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>form.addEventListener('submit', async (e) =&gt; {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>e.preventDefault();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Convert the rating to a number for comparison</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const numericRating = parseInt(rating, 10);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const formData = new FormData(form);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = Object.fromEntries(formData.entries());</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (rating &gt;= 4) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Redirect to your Google review link</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (numericRating &gt;= 4) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Redirect to your Google review link if rating is 4 or above</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.location.href = "https://g.page/r/CTJy9-oPDoYIEAI/review";</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Simulate posting a review locally</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Simulate posting a review locally if rating is less than 4</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>alert("Thank you for your feedback. We value your input to improve our service.");</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
