@@ -1,18 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2566">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    form { margin: 20px auto; width: 300px; text-align: left; }
+    label { display: block; margin-bottom: 5px; }
+    input, textarea, button { 
+      width: 100%; 
+      padding: 10px; 
+      margin-bottom: 10px; 
+      font-size: 16px; 
+    }
+    button { 
+      background-color: blue; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      border-radius: 5px; 
+    }
   </style>
 </head>
 <body>
+<<<<<<< HEAD
 <p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
 <p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
 <p class="p1"><span class="s1">&lt;head&gt;</span></p>
@@ -80,5 +92,41 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+=======
+  <h1>Leave a Review</h1>
+  <form id="reviewForm">
+    <input type="hidden" id="rating" name="rating">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="review">Review:</label>
+    <textarea id="review" name="review" rows="5" maxlength="500" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const rating = params.get('rating');
+    document.getElementById('rating').value = rating;
+
+    const form = document.getElementById('reviewForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      if (rating >= 4) {
+        // Redirect to your Google review link
+        window.location.href = "https://g.page/r/CTJy9-oPDoYIEAI/review";
+      } else {
+        // Simulate posting a review locally
+        alert("Thank you for your feedback. We value your input to improve our service.");
+      }
+    });
+  </script>
+>>>>>>> 7691435ece9f0b12048e5d124954e6ec5ed6e078
 </body>
 </html>
